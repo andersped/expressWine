@@ -1,0 +1,50 @@
+<% include partials/header %>
+<h1 class="text-center">Edit One of the Wines</h1>
+
+<form action="/wines<%= wine.id%>?_method=put" method="POST" class="form-horizontal">
+
+	<div class="form-group">
+		<label for="varietal" class="col-sm-2 control-label">Varietal</label>
+			<div class="col-sm-10">	
+				<input type="text" name="wines[varietal]" value="<%= wine.varietal %>" id="varietal" class="form-control">
+			</div>
+	</div>
+
+	<div class="form-group">
+		<label for="vintage" class="col-sm-2 control-label">Vintage</label>
+			<div class="col-sm-10">	
+				<input type="text" name="wines[vintage]" value="<%= wine.vintage %>" id="vintage" class="form-control">
+			</div>
+	</div>
+
+	<div class="form-group">
+		<label for="color" class="col-sm-2 control-label">Color</label>
+			<div class="col-sm-10">	
+				<input type="text" name="wines[color]" value="<%= wine.color %>" id="color" class="form-control">
+			</div>
+	</div>
+
+	<div class="form-group">
+		<label for="appelation" class="col-sm-2 control-label">Appelation</label>
+			<div class="col-sm-10">	
+				<input type="text" name="wines[appelation]" value="<%= wine.appelation %>" id="appelation" class="form-control">
+			</div>
+	</div>
+
+	<div class="form-group">
+		<label for="img" class="col-sm-2 control-label">Image</label>
+			<div class="col-sm-10">	
+				<input type="text" name="wines[img]" id="img" class="form-control">
+			</div>
+	</div>
+	<div class="form-group">
+    	<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default">Update It!</button>
+	
+
+
+
+
+</form>
+<a href= "/wines">Go Back</a>
+<% include partials/header %>

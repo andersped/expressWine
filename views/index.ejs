@@ -1,0 +1,32 @@
+<% include partials/header %>
+<h1 class="text-center">Your Favorite Wines</h1>
+
+<a href="/wines/new">Add Wines</a>
+<table class="table table-striped table-hover">
+<thead>
+	<tr>
+		<th>Varietal</th>
+		<th>Vintage</th>
+		<th>Color</th>
+		<th>Appelation</th>
+		<th>Image</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+	</thead>
+	<tbody>
+
+<% wines.forEach(function(wine){ %>
+	<tr>
+		<td><%= wine.varietal %></td>
+		<td><%= wine.vintage %></td>
+		<td><%= wine.color %></td>
+		<td><%= wine.appelation %></td>
+		<td><a href="<%= wine.image %>"></td>
+		<td><a href="/wines/<%= wine.id%>/edit">Edit</a></td>
+		<td><form action="/wines/<%= wine.id %>?_method=delete" method= "POST"><input type="submit" value="X"></form></td>
+	</tr>
+	<%})%>
+	</tbody>
+</table>
+<% include partials/header %>
